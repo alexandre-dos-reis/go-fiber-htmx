@@ -8,10 +8,8 @@ import (
 )
 
 func main() {
-	engine := engine.GetEngine()
-
 	app := fiber.New(fiber.Config{
-		Views:       engine,
+		Views:       engine.GetEngine(),
 		ViewsLayout: "layouts/main",
 	})
 
